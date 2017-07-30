@@ -1,0 +1,11 @@
+body, html, #root, .App {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.Projects {
+  height: 100%;
+  background: rgba(35,35,35, 1);
+}
