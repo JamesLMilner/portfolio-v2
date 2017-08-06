@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import Mountains from './Mountains.js';
 import './TopBar.css';
 
-class Top extends Component {
+class TopBar extends Component {
 
   render() {
     return (
         <div className="TopBar">
-          <h2>Portfolio</h2>
-          <Mountains/>
+          <h1>Portfolio</h1>
+          <input 
+            placeholder="Search..." 
+            className="Search" 
+            type="text" 
+            value={this.props.value} 
+            onChange={this.props.handleChange} />
         </div>
     );
   }
 }
 
-export default Top;
+export default TopBar;

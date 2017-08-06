@@ -1,16 +1,43 @@
 .TopBar {
-  background: white;
+  background: rgba(255,255,255,0);
   color: black;
   font-size: 40px;
-  padding:0px;
-  margin:0px;
+  padding: 0px;
+  margin: 0px;
   height: 200px;
   font-family: 'Poiret One', cursive;
   text-align: center;
+  z-index: 0;
+  margin-bottom: 40px;
 }
 
-.TopBar h2 {
-  margin: 0px;
-  padding: 20px;
+.TopBar h1 {
   font-weight: normal;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 15px;
+
 }
+
+.TopBar .Search {
+  z-index: 2;
+  width: 300px;
+  height: 40px;
+  font-family: sans-serif;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  border: 1px solid #DDDDDD;
+}
+ 
+/* .TopBar .Search:focus {
+  box-shadow: 0 0 5px #f289a4;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+} */

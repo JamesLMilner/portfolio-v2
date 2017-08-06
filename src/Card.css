@@ -1,0 +1,78 @@
+.Card {
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 40px;
+    
+    -moz-animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    -ms-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    animation-duration: 1s;
+    -moz-animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;  
+}
+
+.Card div {
+    width: 70%;
+    border-radius: 1px;
+    margin: 0 auto;
+    font-size: 20px;
+    vertical-align: center;
+    border: solid black 2px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    
+}
+
+.dialogLinks {
+    color: #f58ea8 !important;
+}
+
+.vex-dialog-button-secondary {
+    display: none !important;
+}
+
+.vex.vex-theme-wireframe .vex-content {
+    min-width: 320px;
+    width: 40vw !important;
+}
+
+.vex.vex-theme-wireframe {
+    top: 5vh !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+.Card div:hover {
+  background: rgba(1, 1, 1, 1.0);
+  color: white;
+} 
+
+.Card .fadeOut {
+    -moz-animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;
+    -ms-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-moz-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+@-webkit-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+@-ms-keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+@keyframes fadeIn { 0% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; }}
+
+@-moz-keyframes fadeOut { 0% { opacity: 1; visibility: visible; }  100% { opacity: 0; visibility: hidden; }} 
+@-webkit-keyframes fadeOut { 0% { opacity: 1; visibility: visible; }  100% { opacity: 0; visibility: hidden; }} 
+@-ms-keyframes fadeOut { 0% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; }} 
+@keyframes fadeOut { 0% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden;  }} 

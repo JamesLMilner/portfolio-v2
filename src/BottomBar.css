@@ -1,0 +1,20 @@
+.BottomBar {
+  height: 35px;
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-align: center;
+  line-height: 35px;
+  z-index: 2;
+  background-color: rgba(35, 35, 35, 0.95);
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+.reactLogo {
+  width: 60px;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}

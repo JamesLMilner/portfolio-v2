@@ -6,7 +6,9 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10",
-    "three": "^0.86.0"
+    "react-transition-group": "^2.2.0",
+    "three": "^0.86.0",
+    "vex-js": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
