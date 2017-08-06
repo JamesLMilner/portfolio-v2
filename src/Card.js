@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './Card.css'
 
+import vex from 'vex-js';
+import vexDialog from 'vex-dialog';
 import 'vex-js/dist/css/vex.css';
 import 'vex-js/dist/css/vex-theme-wireframe.css';
 
-var vex = require('vex-js');
-vex.registerPlugin(require('vex-dialog'));
+vex.registerPlugin(vexDialog);
 vex.defaultOptions.className = "vex-theme-wireframe";
 
 class Card extends Component {
@@ -13,13 +14,22 @@ class Card extends Component {
   constructor() {
     super();
     this.message = "";
+    this.currentCard = null;
+  }
+
+  componentDidMount() {
+    
+    requestAnimationFrame(function(){
+       this.currentCard.className += "fadeIn fadeOut";
+    }.bind(this));
+   
   }
 
   createMessage() {
     return `<h3> ${this.props.data.name} </h3>
     <p> <strong>On this project I was a</strong>: ${this.props.data.relation} </p>
     <p> <strong>What was it?</strong> ${this.props.data.snippet} </p>
-    <p> <strong>Core Technologies: </strong> </p> ${this.props.data.technologies} </p>
+    <p> <strong>Core technologies: </strong> </p> ${this.props.data.technologies} </p>
     <p> <a class="dialogLinks" href="${this.props.data.demo}" <strong>Demo Link </strong></a></p>
     <p> <a class="dialogLinks" href="${this.props.data.github}" <strong>Source Link </strong></a></p>`
   }
@@ -44,6 +54,7 @@ class Card extends Component {
   }
 
   render() {
+    
     const search = this.props.value.toLowerCase();
     const check = this.props.data.tags.indexOf(search);
     
@@ -51,7 +62,8 @@ class Card extends Component {
        return (
         <div 
           onClick={this.confirm.bind(this)}
-          className="Card pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 fadeIn fadeOut">
+          ref={(card) => { this.currentCard = card; }}
+          className="Card pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
           <div>{this.props.data.name}</div>
         </div>
       );

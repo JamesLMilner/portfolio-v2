@@ -5,3 +5,9 @@
   opacity: 0.40;
   z-index: -1;
 }
+
+.noWebGL {
+  background: url('./mountains.png');
+  height: 100%;
+  width: 100%;
+}

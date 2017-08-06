@@ -1,5 +1,5 @@
 .TopBar {
-  background: rgba(255,255,255,0);
+
   color: black;
   font-size: 40px;
   padding: 0px;
@@ -20,6 +20,7 @@
 }
 
 .TopBar .Search {
+  
   z-index: 2;
   width: 300px;
   height: 40px;
@@ -32,8 +33,7 @@
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
-  border: 1px solid #DDDDDD;
+  border: solid black 2px;
 }
  
 /* .TopBar .Search:focus {
