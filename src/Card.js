@@ -13,15 +13,20 @@ class Card extends Component {
 
   constructor() {
     super();
+    console.log("Card Constructor");
+    this.defaultClass = "Card pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 ";
     this.message = "";
+    this.addClass = " fadeIn ";
     this.currentCard = null;
   }
 
   componentDidMount() {
     
-    requestAnimationFrame(function(){
-       this.currentCard.className += "fadeIn fadeOut";
-    }.bind(this));
+    console.log("componentDidMount")
+    requestAnimationFrame(() => {
+       const newClass = this.defaultClass + " " + this.currentCard._fade;
+       this.currentCard.className = newClass;
+    });
    
   }
 
@@ -56,20 +61,28 @@ class Card extends Component {
   render() {
     
     const search = this.props.value.toLowerCase();
-    const check = this.props.data.tags.indexOf(search);
-    
-    if (check !== -1 || search === "") {
-       return (
-        <div 
-          onClick={this.confirm.bind(this)}
-          ref={(card) => { this.currentCard = card; }}
-          className="Card pure-u-1-1 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4">
-          <div>{this.props.data.name}</div>
-        </div>
-      );
-    } else {
-        return null
+    const checkTags = this.props.data.tags.indexOf(search) !== -1;
+    const checkName = this.props.data.name.toLowerCase().indexOf(search) !== -1;
+
+    let fade = " fadeOut ";
+
+    if (checkName || checkTags || search === "") {
+      fade = " fadeIn ";
     }
+
+    return (
+      <div 
+        onClick={this.confirm.bind(this)}
+        ref={(card) => {
+          if (card) {
+            card._fade = fade; 
+            this.currentCard = card; 
+          }
+        }}
+        className={this.defaultClass + fade}>
+        <div>{this.props.data.name}</div>
+      </div>
+    );
 
   }
 

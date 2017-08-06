@@ -1,8 +1,6 @@
 .BottomBar {
   height: 35px;
   width: 100%;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
   text-align: center;
   line-height: 35px;
   z-index: 2;

@@ -9,7 +9,7 @@ class BottomBar extends Component {
         <div className="pure-u-1 BottomBar">
           <span> 
             © James Milner, 2017 - Made using 
-            <img className="reactLogo" src={reactLogo}/> 
+            <img className="reactLogo" alt="React Logo" src={reactLogo}/> 
           </span>
         </div>
     );
