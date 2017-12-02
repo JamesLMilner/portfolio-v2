@@ -60,7 +60,9 @@ class Card extends Component {
 
   render() {
     
-    const search = this.props.value.toLowerCase();
+    let search = this.props.value.toLowerCase();
+    search = search.trim();
+    
     const checkTags = this.props.data.tags.indexOf(search) !== -1;
     const checkName = this.props.data.name.toLowerCase().indexOf(search) !== -1;
 

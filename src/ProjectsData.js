@@ -219,7 +219,7 @@ const ProjectsData = [
         'demo' : "https://geovation.github.io/labelgun/",
         'license': "MIT",
         'github' : "https://github.com/Geovation/labelgun",
-        'tags' : ['javascript', 'leaflet', 'map', 'openlayers', 'openlayers3', 'es6']},
+        'tags' : ['javascript', 'leaflet', 'map', 'openlayers', 'openlayers3', 'es6', 'webpack']},
 
         {'name': 'Facebook Population Viz',
         'relation' : 'Developer',
@@ -259,7 +259,7 @@ const ProjectsData = [
         'demo' : "https://jamesmilneruk.github.io/scratchmap",
         'license': "MIT",
         'github' : "https://github.com/JamesMilnerUK/scratchmap",
-        'tags' : ['web', 'web components', 'components', 'polymer', 'javascript', 'map', 'scratch', 'scratchmap']},
+        'tags' : ['web', 'web components', 'webpack', 'es6', 'components', 'polymer', 'javascript', 'map', 'scratch', 'scratchmap', 'html', 'css']},
 
         {'name': 'Git Words',
         'relation' : 'Developer',
@@ -280,7 +280,7 @@ const ProjectsData = [
         'demo' : "",
         'license': "",
         'github' : "https://github.com/JamesMilnerUK/git-words",
-        'tags' : ['meteor', 'javascript']},
+        'tags' : ['meteor', 'javascript', 'html', 'css']},
 
         {'name': 'Flock',
         'relation' : 'Contract Developer',
@@ -290,7 +290,18 @@ const ProjectsData = [
         'demo' : "",
         'license': "",
         'github' : "",
-        'tags' : ['meteor', 'javascript']},
+        'tags' : ['javascript', 'ionic', 'nodejs', 'node', 'express']},
+
+
+        {'name': '3D Repo',
+        'relation' : 'Fulltime Fullstack Developer',
+        'snippet': 'A collaborative online BIM platform',
+        'imageUrl': imageLocation + 'flock.png',
+        'technologies': 'Angular, Service Worker, Pug, Gulp, Webpack, Node.js',
+        'demo' : "",
+        'license': "",
+        'github' : "",
+        'tags' : ['javascript', 'ionic', 'nodejs', 'node', 'express']},
 
       ];
 

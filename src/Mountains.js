@@ -19,7 +19,7 @@ class Mountains extends Component {
         for(let i=0; i < names.length; i++) {
             try {
                 context = canvas.getContext(names[i]);
-                const isFunction = typeof context.getParameter == "function";
+                const isFunction = typeof context.getParameter === "function";
                 if (context && isFunction) {
                     // WebGL is enabled
                     return true;
